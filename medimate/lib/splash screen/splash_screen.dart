@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+import 'package:medimate/on_boarding_screen/onbourdingscreen.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    init();
+  }
+  void init()async{
+    await Future.delayed(const Duration(seconds: 3));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Onbourdingscreen(),));
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset("assets/Spalsh screen.png",fit: BoxFit.fill,filterQuality: FilterQuality.high,);
+  }
+}

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:medimate/custom_parent_widget.dart';
+import 'package:medimate/on_boarding_screen/onbourdingscreen.dart';
+import 'package:medimate/splash%20screen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +13,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      title: 'Medimate',
+     theme: ThemeData(
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: Colors.white,
+      brightness: Brightness.light,
+    ),
+    scaffoldBackgroundColor: Colors.white,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.white,
+      foregroundColor: Colors.black,
+      elevation: 0,
+    ),
+    useMaterial3: true,
+  ),
+      home: CustomParentWidget(child: SplashScreen()),
     );
   }
 }
