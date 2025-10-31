@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
+import 'package:my_flutter_onboarding_slider/my_flutter_onboarding_slider.dart';
 class Onbourdingscreen extends StatelessWidget{
   const Onbourdingscreen({super.key});
 
