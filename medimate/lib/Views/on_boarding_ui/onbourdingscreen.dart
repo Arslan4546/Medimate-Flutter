@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medimate/Views/login_screen_ui/login_screen.dart';
 import 'package:my_flutter_onboarding_slider/my_flutter_onboarding_slider.dart';
 class Onbourdingscreen extends StatelessWidget{
   const Onbourdingscreen({super.key});
@@ -77,7 +78,11 @@ class Onbourdingscreen extends StatelessWidget{
               SizedBox(
                 height: 56,
                 width: 250
-                ,child: ElevatedButton(style: ButtonStyle(backgroundColor: WidgetStateColor.resolveWith((states) => Colors.blueAccent,)),onPressed: (){}, child: Text("Login",style: TextStyle(color: Colors.white)),)),
+                ,child: ElevatedButton(style: ButtonStyle(backgroundColor: WidgetStateColor.resolveWith((states) => Colors.blueAccent,)),
+                onPressed: (){
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginScreen(),));
+                }, 
+                child: Text("Login",style: TextStyle(color: Colors.white)),)),
               Padding(padding: EdgeInsetsGeometry.all(8)),  
               SizedBox(
                 height: 56,
