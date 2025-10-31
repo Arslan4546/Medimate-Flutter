@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medimate/custom_parent_widget.dart';
+import 'package:medimate/Widgets/custom_parent_widget.dart';
 import 'package:medimate/splash%20screen/splash_screen.dart';
 
 void main() {
