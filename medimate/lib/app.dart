@@ -8,7 +8,8 @@ class MyApp extends StatelessWidget {
         BlocProvider<SignUpBloc>(create: (context) => SignUpBloc(),)
       ],
       child: MaterialApp(
-        title: 'Medimate',
+        title: AppConstants.appName,
+        
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.white,
