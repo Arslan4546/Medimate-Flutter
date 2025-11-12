@@ -1,9 +1,8 @@
-import 'dart:developer';
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:medimate/Views/login_screen_ui/login_screen.dart';
+import 'package:medimate/Views/login_screen/login_screen.dart';
+
 import 'package:medimate/Widgets/custom_button.dart';
 import 'package:medimate/Widgets/custom_text_field.dart';
 import 'package:medimate/controllers/sign_up_bloc/sign_up_bloc.dart';
@@ -45,17 +44,12 @@ class SignUpScreen extends StatelessWidget {
                 children: [
                   Text(
                     "Already have an account?",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                    ),
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                   ),
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => LoginScreen(),
-                        ),
+                        MaterialPageRoute(builder: (context) => LoginScreen()),
                       );
                     },
                     child: Text(
@@ -115,44 +109,40 @@ class SignUpScreen extends StatelessWidget {
                         child: RichText(
                           strutStyle: StrutStyle(
                             fontWeight: FontWeight.w800,
-                            fontSize: 18
+                            fontSize: 18,
                           ),
                           maxLines: 2,
-                        text: TextSpan(
-                          style: const TextStyle(
-                            color: Colors.black87,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400
+                          text: TextSpan(
+                            style: const TextStyle(
+                              color: Colors.black87,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                            ),
+                            children: [
+                              const TextSpan(text: 'I agree to the healthcare'),
+                              TextSpan(
+                                text: 'Terms of Service',
+                                style: const TextStyle(
+                                  color: Colors.blue,
+                                  decoration: TextDecoration.underline,
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {},
+                              ),
+                              const TextSpan(text: ' and '),
+                              TextSpan(
+                                text: 'Privacy Policy',
+                                style: const TextStyle(
+                                  color: Colors.blue,
+                                  decoration: TextDecoration.underline,
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {},
+                              ),
+                              const TextSpan(text: '.'),
+                            ],
                           ),
-                          children: [
-                            const TextSpan(text: 'I agree to the healthcare'),
-                            TextSpan(
-                              text: 'Terms of Service',
-                              style: const TextStyle(
-                                color: Colors.blue,
-                                decoration: TextDecoration.underline,
-                              ),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () {
-                                  
-                                },
-                            ),
-                            const TextSpan(text: ' and '),
-                            TextSpan(
-                              text: 'Privacy Policy',
-                              style: const TextStyle(
-                                color: Colors.blue,
-                                decoration: TextDecoration.underline,
-                              ),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () {
-                                  
-                                },
-                            ),
-                            const TextSpan(text: '.'),
-                          ],
                         ),
-                                          ),
                       ),
                     ],
                   ),
