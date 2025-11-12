@@ -5,7 +5,7 @@ import 'package:medimate/Views/login_screen/login_screen.dart';
 
 import 'package:medimate/Widgets/custom_button.dart';
 import 'package:medimate/Widgets/custom_text_field.dart';
-import 'package:medimate/controllers/sign_up_bloc/sign_up_bloc.dart';
+import 'package:medimate/controllers/sign_up_bloc/check_box_bloc/check_box_bloc.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -67,7 +67,7 @@ class SignUpScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: BlocBuilder<SignUpBloc, SignUpState>(
+      body: BlocBuilder<CheckBoxBloc, CheckBoxState>(
         builder: (context, state) {
           return Padding(
             padding: const EdgeInsets.only(left: 40, right: 40),
@@ -98,7 +98,7 @@ class SignUpScreen extends StatelessWidget {
                         child: Checkbox(
                           value: state.checkBox,
                           onChanged: (value) {
-                            context.read<SignUpBloc>().add(
+                            context.read<CheckBoxBloc>().add(
                               OnClickCheckBox(value: value ?? false),
                             );
                           },
