@@ -3,14 +3,14 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class AppStrings {
-  static const String appName = "MyFlutterApp";
+  static const String appName = "Medimate";
   static const String apiBaseUrl = "https://api.myflutterapp.com";
   static const int timeoutDuration = 30; // in seconds
 }
 
 class AppColors {
   // Colors - Professional color palette
-  static const Color primaryColorLight = Color(0xFF3F51B5); // Indigo
+  static const Color primaryColorLight = Colors.blueAccent; // Indigo
   static const Color primaryColorDark = Color(0xFF5C6BC0); // Lighter Indigo
   static const Color secondaryColorLight = Color(0xFF00BCD4); // Cyan
   static const Color secondaryColorDark = Color(0xFF26C6DA); // Lighter Cyan
