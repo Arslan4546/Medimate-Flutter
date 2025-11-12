@@ -21,9 +21,3 @@ class AppColors {
   static const Color textDark = Colors.black87;
   static const Color textLight = Colors.white;
 }
-
-class AppStrings {
-  static const String appName = "Medimate";
-  static const String apiBaseUrl = "https://api.myflutterapp.com";
-  static const int timeoutDuration = 30; // in seconds
-}
