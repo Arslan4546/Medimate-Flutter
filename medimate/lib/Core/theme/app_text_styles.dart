@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medimate/Core/utils/constants.dart';
+import 'package:medimate/Core/theme/app_colors.dart';
 
 class AppTextStyles {
   static const TextStyle heading = TextStyle(
