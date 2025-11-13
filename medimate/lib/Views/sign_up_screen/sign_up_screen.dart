@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:medimate/Views/login_screen_ui/login_screen.dart';
+import 'package:medimate/Views/login_screen/login_screen.dart';
 import 'package:medimate/Widgets/custom_button.dart';
 import 'package:medimate/Widgets/custom_text_field.dart';
 import 'package:medimate/controllers/sign_up_bloc/sign_up_bloc.dart';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medimate/Views/bottom%20navigaation/bottom_navigation.dart';
 import 'package:medimate/Views/sign_up_screen/sign_up_screen.dart';
 import 'package:medimate/Widgets/custom_button.dart';
 import 'package:medimate/Widgets/custom_text_field.dart';
@@ -41,7 +42,9 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: 56,
               width: double.infinity,
-              child: CustomButton(buttonColor: Colors.blueAccent, label: "Sign In", labelColorData: Colors.white, onPressed: (){}),
+              child: CustomButton(buttonColor: Colors.blueAccent, label: "Sign In", labelColorData: Colors.white, onPressed: (){
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => BottomNavigation(),));
+              }),
             ),
             Padding(padding: EdgeInsetsGeometry.all(1)),
             Row(

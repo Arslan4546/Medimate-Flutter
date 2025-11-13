@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medimate/Views/on_boarding_ui/onbourdingscreen.dart';
+import 'package:medimate/Views/on_boarding/onbourdingscreen.dart';
+
 
 
 class SplashScreen extends StatefulWidget {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medimate/Views/login_screen_ui/login_screen.dart';
+import 'package:medimate/Views/login_screen/login_screen.dart';
+
 import 'package:my_flutter_onboarding_slider/my_flutter_onboarding_slider.dart';
 class Onbourdingscreen extends StatelessWidget{
   const Onbourdingscreen({super.key});
