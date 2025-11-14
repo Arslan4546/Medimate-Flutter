@@ -7,7 +7,7 @@ class NotificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Notification Screen"),
+        child: Image.asset("assets/Group 200.png"),
       ),
     );
   }

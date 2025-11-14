@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medimate/Views/top%20doctors/top_doctors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -80,22 +81,25 @@ class HomeScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Column(
-                              children: [
-                                Container(
-                                  height: width*0.12,
-                                  width: width*0.12,
-                                  decoration: BoxDecoration(
-                                    color: Colors.blueAccent,
-                                    borderRadius: BorderRadius.circular(100)
+                            GestureDetector(
+                              onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => TopDoctors(),)),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    height: width*0.12,
+                                    width: width*0.12,
+                                    decoration: BoxDecoration(
+                                      color: Colors.blueAccent,
+                                      borderRadius: BorderRadius.circular(100)
+                                    ),
+                                    child: Image.asset("assets/Doctor.png"),
                                   ),
-                                  child: Image.asset("assets/Doctor.png"),
-                                ),
-                                SizedBox(
-                                  height: height*0.01,
-                                ),
-                                Text("Top Doctors",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400),)
-                              ],
+                                  SizedBox(
+                                    height: height*0.01,
+                                  ),
+                                  Text("Top Doctors",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400),)
+                                ],
+                              ),
                             ),
                             Column(
                               children: [
@@ -148,6 +152,7 @@ class HomeScreen extends StatelessWidget {
                         height: height*0.22,
                         width: width,
                         child: ListView.builder(
+                          itemCount: 5,
                           itemBuilder: (context, index) => Padding(
                             padding: const EdgeInsets.only(bottom: 10),
                             child: Container(height: 67,width: width,
