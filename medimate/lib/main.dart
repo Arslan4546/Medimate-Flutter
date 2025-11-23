@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:medimate/Views/splash_screen/splash_screen.dart';
 import 'package:medimate/Widgets/custom_parent_widget.dart';
 import 'package:medimate/controllers/bottom_navigation/bottom_navigation_bloc.dart';
+import 'package:medimate/controllers/home_bloc/home_bloc_bloc.dart';
 import 'package:medimate/controllers/sign_up_bloc/sign_up_bloc.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -17,7 +21,8 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<SignUpBloc>(create: (context) => SignUpBloc(),),
-        BlocProvider<BottomNavigationBloc>(create: (context) => BottomNavigationBloc(),)
+        BlocProvider<BottomNavigationBloc>(create: (context) => BottomNavigationBloc(),),
+        BlocProvider<HomeBlocBloc>(create: (context) => HomeBlocBloc(),),
       ],
       child: MaterialApp(
         title: 'Medimate',
